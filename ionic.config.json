@@ -1,0 +1,7 @@
+{
+  "name": "EduvoPOS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
