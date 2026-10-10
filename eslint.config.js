@@ -27,6 +27,9 @@ module.exports = tseslint.config(
   {
     files: ["**/*.html"],
     extends: [...angular.configs.templateRecommended],
-    rules: {},
+    rules: {
+      // Ionic page templates still use structural directives throughout this project.
+      "@angular-eslint/template/prefer-control-flow": "off",
+    },
   }
 );

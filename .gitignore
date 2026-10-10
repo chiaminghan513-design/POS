@@ -68,3 +68,13 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Private Android configuration and generated output
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+android/app/google-services.json
+/.gradle-cache/
+/.gradle-user-home/

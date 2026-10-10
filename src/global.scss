@@ -1,3 +1,4 @@
+@use "sass:meta";
 /*
  * App Global CSS
  * ----------------------------------------------------------------------------
@@ -34,4 +35,19 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import "@ionic/angular/css/palettes/dark.system.css";
+html, body { background:#f5f5f7; color:#242438; font-family:var(--ion-font-family); }
+ion-item { --highlight-color-focused:#5b5bd6; }
+ion-alert { --background:#fff; --backdrop-opacity:.35; }
+ion-alert .alert-wrapper { border:1px solid #e2e2ec; border-radius:20px; box-shadow:0 24px 70px #24243824; }
+ion-alert .alert-button { color:#5b5bd6; font-weight:600; text-transform:none; }
+ion-toast { --border-radius:14px; --box-shadow:0 10px 30px #24243820; --button-color:inherit; }
+ion-toast.ion-color-success { --ion-color-base:#e9f5ed; --ion-color-contrast:#216344; }
+ion-toast.ion-color-warning { --ion-color-base:#fff3dc; --ion-color-contrast:#7c5414; }
+ion-toast.ion-color-danger { --ion-color-base:#fcecef; --ion-color-contrast:#97364b; }
+
+/* Scoped to POS only; Ionic overlays remain styled separately above. */
+ion-app app-home.ion-page {
+  --ink:#242438; --green:#5b5bd6; --lime:#eae9ff; --paper:#f5f5f7; --muted:#6e7183;
+  @include meta.load-css('app/home/counter-layout');
+  @include meta.load-css('app/home/portal-polish');
+}
